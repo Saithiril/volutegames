@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta name="keywords" content="Volute Games, Bowling, Indie games, Инди игры">
+		<meta name="description" content="">
+		<title>{% block title %}Volute Games{% endblock %}</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+		<link rel="stylesheet" type="text/css" href={% block css_file %}"/media/css/style.css"{% endblock %}/>
+	</head>
+	<body>
+		<div id="ev_bg"><div id="content">
+			<div id="left">
+				<img class="logo" src="/media/img/_logo.png" alt="Logo" width="163px" height="185px"/>
+				<div id="bg_navigate">
+					<div id="navigate">
+						<a href="index.php">Новости</a>
+						<a href="games.php">Игры</a>
+						<a href="about.php">О нас</a>
+					</div>
+				</div>
+			</div>
+			{% block header %}{% endblock %}
+			{% block content %}{% endblock %}
+			<div id="footer">
+				<p>©2012 <span class="name">Pit<span>, <span class="name">Saitihril<span>. </p>
+			</div>
+		</div></div>
+	</body>
+</html>

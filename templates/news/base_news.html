@@ -1,0 +1,25 @@
+﻿{% extends "news/base.html" %}
+{% block header %}
+		<div class="topic">
+			<div class="auth">
+				{% if is_auth %}
+					<span class="login">
+						<span><b>{{ username }}</b></span><br/>
+					</span>
+					<span class="signup">
+						<a href="/logout">Выход</a>
+					</span>
+				{% else %}
+					<span class="login">
+						<a href="/auth">Вход</a>
+					</span>
+					<span class="signup">
+						<a href="registration.php">Регистрация</a>
+					</span>
+				{% endif %}
+			</div>
+		</div>
+{% endblock %}
+		<div id="center">
+			{% block center %}{% endblock %}
+		</div>

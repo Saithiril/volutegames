@@ -1,0 +1,25 @@
+﻿{% extends "news/base.html" %}
+{% block content %}
+		<div class="topic_name">
+			<span>Вход</span>
+		</div>
+		<div id="reg">
+			{% if form.errors %}
+				<p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+			{% endif %}
+			<form method="post" action="login">{% csrf_token %}
+				<div class="string">
+					<div><span>Логин</span></div>
+					<input type="text" class="short_test" name="username"/>
+				</div>
+				<div class="string">
+					<div><span>Пароль</span></div>
+					<input type="password" class="short_test" name="password"/>
+				</div>
+				<?php
+						echo "$error_msg";
+				?>
+				<button type="submit" class="nice_button auth_button" name="login"/>
+			</form>
+		</div>
+{% endblock %}
