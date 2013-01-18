@@ -2,9 +2,9 @@
 {% block header %}
 		<div class="topic">
 			<div class="auth">
-				{% if is_auth %}
+				{% if user.is_authenticated %}
 					<span class="login">
-						<span><b>{{ username }}</b></span><br/>
+						<span><b>{{ user.username }}</b></span><br/>
 					</span>
 					<span class="signup">
 						<a href="/logout">Выход</a>
@@ -14,7 +14,7 @@
 						<a href="/auth">Вход</a>
 					</span>
 					<span class="signup">
-						<a href="registration.php">Регистрация</a>
+						<a href="reg">Регистрация</a>
 					</span>
 				{% endif %}
 			</div>

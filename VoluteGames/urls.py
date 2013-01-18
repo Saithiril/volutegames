@@ -15,9 +15,12 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^$', 'news.views.index'),
-	url(r'^auth$', 'VoluteGames.views.auth'),
+	url(r'^home$', 'news.views.index'),
+	url(r'^auth$', 'VoluteGames.views.authorization'),
 	url(r'^login$', 'VoluteGames.views.login'),
 	url(r'^logout$', 'VoluteGames.views.logout'),
+	url(r'^reg$', 'VoluteGames.views.registration'),
+	url(r'^signup$', 'VoluteGames.views.signup'),
 )
 
 urlpatterns += patterns('',

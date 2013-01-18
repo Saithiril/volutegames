@@ -4,7 +4,7 @@
 			<span>Вход</span>
 		</div>
 		<div id="reg">
-			{% if form.errors %}
+			{% if error %}
 				<p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
 			{% endif %}
 			<form method="post" action="login">{% csrf_token %}
